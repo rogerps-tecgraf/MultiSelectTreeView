@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
 	<metadata>
-		<id>MultiSelectTreeView</id>
-		<title>MultiSelectTreeView</title>
+		<id>MultiSelectTreeView_Tecgraf</id>
+		<title>MultiSelectTreeView_Tecgraf</title>
 		<version>1.0.9</version>
 		<authors>Yves Goergen, Goroll</authors>
 		<owners>Yves Goergen</owners>
