@@ -501,7 +501,7 @@ namespace System.Windows.Controls
 			base.OnMouseDoubleClick(e);
 
 			FrameworkElement itemContent = (FrameworkElement) this.Template.FindName("headerBorder", this);
-			if (!itemContent.IsMouseOver)
+			if (itemContent == null || !itemContent.IsMouseOver)
 			{
 				// A (probably disabled) child item was really clicked, do nothing here
 				return;

@@ -170,6 +170,11 @@ namespace System.Windows.Controls
 				foreach (var item in items)
 				{
 					FrameworkElement itemContent = (FrameworkElement) item.Template.FindName("headerBorder", item);
+                    if (itemContent == null)
+                    {
+                        continue;
+                    }
+
 					Point p = itemContent.TransformToAncestor(content).Transform(new Point());
 					double itemLeft = p.X;
 					double itemRight = p.X + itemContent.ActualWidth - 1;
