@@ -285,11 +285,17 @@ namespace System.Windows.Controls
 
 		public void BringItemIntoView(object item)
 		{
-			MultiSelectTreeViewItem node = GetTreeViewItemsFor(new List<object> { item }).First();
-			FrameworkElement itemContent = (FrameworkElement) node.Template.FindName("headerBorder", node);
-            if (itemContent != null)
+            try
             {
-				itemContent.BringIntoView();
+                MultiSelectTreeViewItem node = GetTreeViewItemsFor(new List<object> { item }).First();
+                FrameworkElement itemContent = (FrameworkElement)node.Template.FindName("headerBorder", node);
+                if (itemContent != null)
+                {
+                    itemContent.BringIntoView();
+                }
+            }
+            catch (Exception)
+            {
             }
 		}
 
